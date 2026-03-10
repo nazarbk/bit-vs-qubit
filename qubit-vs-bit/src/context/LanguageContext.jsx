@@ -33,7 +33,56 @@ const translations = {
             state2: "La moneda ha colapsado en el estado",
             action1: "Detener (Medir)",
             action2: "Volver a girar"
-        }
+        },
+        module3: {
+            title: "3. La Medida (El Colapso)",
+            theory: {
+                title: "El Efecto Observador",
+                text1: "En el mundo clásico, mirar un objeto no lo cambia. Si miras un coche aparcado, sigue estando aparcado. Pero en el mundo cuántico, el simple acto de 'medir' u 'observar' altera la realidad.",
+                text2: "Mientras no miramos, el qubit es una onda de probabilidades (superposición). En el instante en que lo medimos, esa onda se rompe o 'colapsa' en un estado único y definitivo: un 0 o un 1. ¡La magia desaparece al mirarla!"
+            },
+            interactionTitle: "La Caja Tímida",
+            unobserved: "ONDA DE PROBABILIDAD (NO OBSERVADA)",
+            observed: "PARTÍCULA COLAPSADA (OBSERVADA)",
+            btnObserve: "Observar (Medir)",
+            btnReset: "Cerrar caja (Restaurar onda)",
+            state1: "La onda fluye en superposición",
+            state2: "¡Colapso detectado! Estado final:"
+        },
+        module4: {
+            title: "4. El Teorema de No-Clonación",
+            theory: {
+                title: "El fin del Ctrl+C / Ctrl+V",
+                text1: "En tu ordenador actual, copiar información es trivial. Puedes hacer un millón de copias exactas de un archivo PDF sin alterar el original.",
+                text2: "En cuántica, esto es imposible. Para copiar algo, primero tienes que 'leerlo' (medirlo). Pero como vimos antes, medir un qubit en superposición hace que colapse. Al intentar copiarlo, destruyes irremediablemente el estado original y obtienes basura."
+            },
+            interaction: "La Máquina Clonadora",
+            classicalLabel: "DSATOS CLÁSICOS (BIT)",
+            quantumLabel: "DATOS CUÁNTICOS (QUBIT)",
+            btnClone: "Intentar Clonar",
+            btnReset: "Limpiar Máquina",
+            successMsg: "¡Clonación exitosa! Original intacto.",
+            errorMsg: "ERROR: Estado original destruido al medir.",
+            formula: "clonar",
+            formula2: "Falso",
+            instruction: "Esperando superposición...",
+            instruction2: "Superposición estable..."
+        },
+        module5: {
+            title: "5. Entrelazamiento",
+            theory: {
+                title: "Acción fantasmal a distancia",
+                text1: "El entrelazamiento ocurre cuando dos qubits se unen tan íntimamente que dejan de ser independientes. Pasan a compartir un único estado cuántico.",
+                text2: "Si separas estos qubits entrelazados a años luz de distancia y mides uno de ellos (haciendo que colapse en 0 o 1), su gemelo colapsará INSTANTÁNEAMENTE en el mismo estado. ¡Es como si se comunicaran más rápido que la luz!"
+            },
+            interaction: "Los Portales Gemelos",
+            earth: "Alice (Tierra)",
+            mars: "Bob (Marte)",
+            btnMeasure: "Medir Qubit",
+            btnReset: "Crear nuevo par entrelazado",
+            statusLinked: "Estado: Entrelazados en Superposición",
+            statusCollapsed: "Estado: Vínculo roto. Ambos colapsados."
+        },
     },
     en: { 
         title: "Quantum Lab",
@@ -67,8 +116,57 @@ const translations = {
             state2: "The coin has collapsed into the state",
             action1: "Stop (Measure)",
             action2: "Turn again"
+        },
+        module3: {
+            title: "3. Measurement (The Collapse)",
+            theory: {
+                title: "The Observer Effect",
+                text1: "In the classical world, looking at an object doesn't change it. If you look at a parked car, it stays parked. But in the quantum world, the simple act of 'measuring' or 'observing' alters reality.",
+                text2: "While unobserved, the qubit is a wave of probabilities (superposition). The instant we measure it, that wave breaks or 'collapses' into a single, definitive state: a 0 or a 1. The magic disappears when you look!"
+            },
+            interactionTitle: "The Shy Box",
+            unobserved: "PROBABILITY WAVE (UNOBSERVED)",
+            observed: "COLLAPSED PARTICLE (OBSERVED)",
+            btnObserve: "Observe (Measure)",
+            btnReset: "Close box (Restore wave)",
+            state1: "The wave flows in superposition,",
+            state2: "Collapse detected! Final state:"
+        },
+        module4: {
+            title: "4. The No-Cloning Theorem",
+            theory: {
+                title: "The end of Ctrl+C / Ctrl+V",
+                text1: "On your current computer, copying information is trivial. You can make a million exact copies of a PDF file without altering the original.",
+                text2: "In quantum mechanics, this is impossible. To copy something, you first have to 'read' (measure) it. But as we saw earlier, measuring a qubit in superposition causes it to collapse. By trying to copy it, you irreversibly destroy the original state and get garbage."
+            },
+            interaction: "The Cloning Machine",
+            classicalLabel: "CLASSICAL DATA (BIT)",
+            quantumLabel: "QUANTUM DATA (QUBIT)",
+            btnClone: "Attempt to Clone",
+            btnReset: "Clear Machine",
+            successMsg: "Cloning successful! Original intact.",
+            errorMsg: "ERROR: Original state destroyed upon measurement.",
+            formula: "clone",
+            formula2: "False",
+            instruction: "Waiting instruction...",
+            instruction2: "Stable superposition..."
+        },
+        module5: {
+            title: "5. Entanglement",
+            theory: {
+                title: "Spooky action at a distance",
+                text1: "Entanglement happens when two qubits become so intimately linked that they are no longer independent. They share a single quantum state.",
+                text2: "If you separate these entangled qubits by light-years and measure one of them (causing it to collapse to 0 or 1), its twin will INSTANTLY collapse to the exact same state. It's as if they communicate faster than light!"
+            },
+            interaction: "The Twin Portals",
+            earth: "Alice (Earth)",
+            mars: "Bob (Mars)",
+            btnMeasure: "Measure Qubit",
+            btnReset: "Create new entangled pair",
+            statusLinked: "Status: Entangled in Superposition",
+            statusCollapsed: "Status: Link broken. Both collapsed."
         }
-    }
+    },
 };
 
 const LanguageContext = createContext();

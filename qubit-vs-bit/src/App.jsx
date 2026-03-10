@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import Module1 from './components/modules/Module1';
 import Module2 from './components/modules/Module2';
+import Module3 from './components/modules/Module3';
+import Module4 from './components/modules/Module4';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 function AppContent() {
@@ -36,8 +38,8 @@ function AppContent() {
       <main>
         {currentModule === 1 && <Module1 />}
         {currentModule === 2 && <Module2 />}
-        {currentModule === 3 && <div>Cargando Módulo 3: La medida...</div>}
-        {currentModule === 4 && <div>Cargando Módulo 4: No-clonación...</div>}
+        {currentModule === 3 && <Module3 />}
+        {currentModule === 4 && <Module4 />}
         {currentModule === 5 && <div>Cargando Módulo 5: Entrelazamiento</div>}
         {currentModule === 6 && <div>Cargando Módulo 6: Criptografía</div>}
       </main>

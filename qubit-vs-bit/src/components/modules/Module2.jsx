@@ -56,13 +56,13 @@ const Module2 = () => {
                     <motion.div
                         className='quantum-coin'
                         animate={{
-                            rotateY: coinState === 'spinning' ? [0,360] : 0,
-                            scale: coinState === 'spinning' ? 1 : 1.1,
+                            rotateX: coinState === 'spinning' ? [0,360] : 0,
+                            scale: coinState === 'spinning' ? 0.9 : 1,
                             borderColor: coinState === 'spinning' ? "var(--primary-quantum)" : "var(--accent-pink)"
                         }}
                         transition={{
-                            rotateY: {
-                                duration: 0.4, 
+                            rotateX: {
+                                duration: 0.6, 
                                 repeat: coinState === 'spinning' ? Infinity : 0,
                                 ease: "linear"
                             },
