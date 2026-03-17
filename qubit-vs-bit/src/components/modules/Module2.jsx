@@ -52,44 +52,45 @@ const Module2 = () => {
                     <span className={`badge &{coinState === 'spinning' ? 'quantum' : ''}`}>
                         {coinState === 'spinning' ? `${t.module2.status2}` : `${t.module2.status1}`}
                     </span>
+                    <div className="interactive-zone">
+                        <motion.div
+                            className='quantum-coin'
+                            animate={{
+                                rotateX: coinState === 'spinning' ? [0,360] : 0,
+                                scale: coinState === 'spinning' ? 0.9 : 1,
+                                borderColor: coinState === 'spinning' ? "var(--primary-quantum)" : "var(--accent-pink)"
+                            }}
+                            transition={{
+                                rotateX: {
+                                    duration: 0.6, 
+                                    repeat: coinState === 'spinning' ? Infinity : 0,
+                                    ease: "linear"
+                                },
+                                scale: {duration: 0.3}
+                            }}
+                        >   
+                            {coinState === 'spinning' ? '?' : coinState}  
+                        </motion.div>
+                    </div>
 
-                    <motion.div
-                        className='quantum-coin'
-                        animate={{
-                            rotateX: coinState === 'spinning' ? [0,360] : 0,
-                            scale: coinState === 'spinning' ? 0.9 : 1,
-                            borderColor: coinState === 'spinning' ? "var(--primary-quantum)" : "var(--accent-pink)"
-                        }}
-                        transition={{
-                            rotateX: {
-                                duration: 0.6, 
-                                repeat: coinState === 'spinning' ? Infinity : 0,
-                                ease: "linear"
-                            },
-                            scale: {duration: 0.3}
-                        }}
-                    >   
-                        {coinState === 'spinning' ? '?' : coinState}  
-                    </motion.div>
-
-                    <p className='status-label' style={{marginBottom: '1rem', minHeight: '24px'}}>
+                    <p className='status-label' style={{margin: '1.5rem 0'}}>
                         {coinState === 'spinning'
                             ? `${t.module2.state1}`
                             : `${t.module2.state2} ${coinState}`}
                     </p>
-
-                    <div style={{display: 'flex', gap: '1rem'}}>
-                            {coinState === 'spinning' ? (
-                                <button className='action-btn' onClick={measureCoin}>
-                                    <Square size={18}></Square>{t.module2.action1}
-                                </button>
-                            ) : (
-                                <button className='action-btn' onClick={resetCoin}>
-                                    <RotateCcw size={18}></RotateCcw>{t.module2.action2}
-                                </button>
-                            )}
+                    <div className="controls-zone">
+                        <div style={{display: 'flex', gap: '1rem'}}>
+                                {coinState === 'spinning' ? (
+                                    <button className='action-btn' onClick={measureCoin}>
+                                        <Square size={18}></Square>{t.module2.action1}
+                                    </button>
+                                ) : (
+                                    <button className='action-btn' onClick={resetCoin}>
+                                        <RotateCcw size={18}></RotateCcw>{t.module2.action2}
+                                    </button>
+                                )}
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

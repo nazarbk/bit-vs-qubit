@@ -45,7 +45,7 @@ const translations = {
             unobserved: "ONDA DE PROBABILIDAD (NO OBSERVADA)",
             observed: "PARTÍCULA COLAPSADA (OBSERVADA)",
             btnObserve: "Observar (Medir)",
-            btnReset: "Cerrar caja (Restaurar onda)",
+            btnReset: "Restaurar onda",
             state1: "La onda fluye en superposición",
             state2: "¡Colapso detectado! Estado final:"
         },
@@ -76,12 +76,30 @@ const translations = {
                 text2: "Si separas estos qubits entrelazados a años luz de distancia y mides uno de ellos (haciendo que colapse en 0 o 1), su gemelo colapsará INSTANTÁNEAMENTE en el mismo estado. ¡Es como si se comunicaran más rápido que la luz!"
             },
             interaction: "Los Portales Gemelos",
-            earth: "Alice (Tierra)",
-            mars: "Bob (Marte)",
+            earth: "ALICE (TIERRA)",
+            mars: "BOB (MARTE)",
             btnMeasure: "Medir Qubit",
             btnReset: "Crear nuevo par entrelazado",
             statusLinked: "Estado: Entrelazados en Superposición",
             statusCollapsed: "Estado: Vínculo roto. Ambos colapsados."
+        },
+        module6: {
+            title: "6. Criptografía Cuántica",
+            theory: {
+                title: "Comunicación In-hackeable (BB84)",
+                text1: "Combinando todo lo anterior, podemos enviar mensajes totalmente seguros. Alice envía una 'llave' hecha de qubits en superposición a Bob.",
+                text2: "Si un Hacker intenta interceptar la llave en el camino, las reglas cuánticas dictan que al medir los qubits, los destruirá o alterará. Bob recibirá datos corruptos, sabrá que hay un espía, y descartará la llave. ¡La física te protege!"
+            },
+            interaction: "Atrapa al Hacker",
+            sender: "Alice (Emisor)",
+            receiver: "Bob (Receptor)",
+            hacker: "Eve (Espía)",
+            btnSendSafe: "Enviar Llave Segura",
+            btnSendHack: "Activar Espía y Enviar",
+            btnReset: "Reiniciar Canal",
+            statusIdle: "Canal de comunicación abierto...",
+            statusSafe: "¡Éxito! Llave recibida sin alteraciones. Conexión segura.",
+            statusHacked: "¡ALARMA! Interferencia cuántica detectada. Llave descartada."
         },
     },
     en: { 
@@ -159,14 +177,32 @@ const translations = {
                 text2: "If you separate these entangled qubits by light-years and measure one of them (causing it to collapse to 0 or 1), its twin will INSTANTLY collapse to the exact same state. It's as if they communicate faster than light!"
             },
             interaction: "The Twin Portals",
-            earth: "Alice (Earth)",
-            mars: "Bob (Mars)",
+            earth: "ALICE (EARTH)",
+            mars: "BOB (MARS)",
             btnMeasure: "Measure Qubit",
             btnReset: "Create new entangled pair",
             statusLinked: "Status: Entangled in Superposition",
             statusCollapsed: "Status: Link broken. Both collapsed."
         }
     },
+    module6: {
+        title: "6. Quantum Cryptography",
+        theory: {
+            title: "Unhackable Communication (BB84)",
+            text1: "Combining everything we've learned, we can send totally secure messages. Alice sends a 'key' made of qubits in superposition to Bob.",
+            text2: "If a Hacker tries to intercept the key in transit, quantum rules dictate that measuring the qubits will destroy or alter them. Bob will receive corrupted data, know there's a spy, and discard the key. Physics protects you!"
+        },
+        interaction: "Catch the Hacker",
+        sender: "Alice (Sender)",
+        receiver: "Bob (Receiver)",
+        hacker: "Eve (Spy)",
+        btnSendSafe: "Send Secure Key",
+        btnSendHack: "Activate Spy and Send",
+        btnReset: "Reset Channel",
+        statusIdle: "Communication channel open...",
+        statusSafe: "Success! Key received unaltered. Secure connection.",
+        statusHacked: "ALARM! Quantum interference detected. Key discarded."
+    }
 };
 
 const LanguageContext = createContext();

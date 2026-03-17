@@ -317,8 +317,8 @@ h2 {
 }
 
 .quantum-coin {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 4px solid var(--primary-quantum);
   display: flex;
@@ -331,21 +331,6 @@ h2 {
   margin-bottom: 1.5rem;
   color: var(--text-main);
   transform-style: preserve-3d;
-}
-
-.glass-box {
-  width: 100%;
-  max-width: 300px;
-  min-height: 250px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .quantum-particle {
@@ -365,7 +350,124 @@ h2 {
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.entanglement-link {
+  position: absolute;
+}
 
+.crypto-container{
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2.5rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.crypto-channel {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 4rem auto 0; 
+}
+
+.crypto-channel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  border-radius: 16px;
+  border: 2px solid var(--border-color);
+  width: 100px; 
+  height: 100px; 
+  transition: all 0.3s ease;
+}
+
+.hacker-node {
+  border-style: dashed;
+  opacity: 0.5;
+}
+
+.hacker-node.active {
+  opacity: 1;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.2);
+}
+
+.bob-node.success {
+  border-color: #4ade80;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+}
+
+.bob-node.alert {
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.2);
+  animation: shake 0.5s;
+}
+
+.traveling-qubit {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  box-shadow: 0 0 15px currentColor;
+}
+
+.interactive-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px; 
+  margin: 2rem 0;
+  position: relative;
+}
+
+.controls-zone {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+@media (max-width: 768px) {
+  .node { width: 90px; padding: 1rem 0.5rem; }
+  .badge { font-size: 0.65rem; }
+}
+
+@media (max-width: 767px) {
+  .entanglement-link {
+    display: none; 
+  }
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }

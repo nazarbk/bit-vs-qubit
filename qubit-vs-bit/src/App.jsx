@@ -4,6 +4,8 @@ import Module1 from './components/modules/Module1';
 import Module2 from './components/modules/Module2';
 import Module3 from './components/modules/Module3';
 import Module4 from './components/modules/Module4';
+import Module5 from './components/modules/Module5';
+import Module6 from './components/modules/Module6';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 function AppContent() {
@@ -40,8 +42,8 @@ function AppContent() {
         {currentModule === 2 && <Module2 />}
         {currentModule === 3 && <Module3 />}
         {currentModule === 4 && <Module4 />}
-        {currentModule === 5 && <div>Cargando Módulo 5: Entrelazamiento</div>}
-        {currentModule === 6 && <div>Cargando Módulo 6: Criptografía</div>}
+        {currentModule === 5 && <Module5 />}
+        {currentModule === 6 && <Module6 />}
       </main>
 
       <footer className='navigation'>

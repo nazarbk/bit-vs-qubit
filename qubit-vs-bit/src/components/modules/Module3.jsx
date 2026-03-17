@@ -57,8 +57,8 @@ const Module3 = () => {
                     <span className={`badge ${!isObserved ? 'quantum' : ''}`} style={isObserved ? { backgroundColor: 'var(--accent-pink)', color: 'white' } : {}}>
                         {!isObserved ? t.module3.unobserved : t.module3.observed}
                     </span>
-
-                    <div className='glass-box'>
+                    
+                    <div className='interactive-zone'>
                         {isObserved && (
                             <motion.div 
                                 initial={{ opacity: 0.8 }} 
@@ -98,19 +98,19 @@ const Module3 = () => {
                     <p className='status-label' style={{margin: '1.5rem 0'}}>
                         {isObserved ? `${t.module3.state2} ${collapseResult} ` : `${t.module3.state1}`}
                     </p>
-
-                    <div style={{display: 'flex', gap: '1rem'}}>
-                        {!isObserved ? (
-                            <button className='action-btn' onClick={handleObserve} style={{borderColor: "var(--accent-pink)", color: "var(--accent-pink)"}}>
-                                <Eye size={18}></Eye> {t.module3.btnObserve}
-                            </button>
-                        ) : (
-                            <button className='action-btn' onClick={handleReset}>
-                                <EyeOff size={18}></EyeOff> {t.module3.btnReset}
-                            </button>
-                        )}
-                    </div>
-
+                    <div className="controls-zone">
+                        <div style={{display: 'flex', gap: '1rem'}}>
+                            {!isObserved ? (
+                                <button className='action-btn' onClick={handleObserve} style={{borderColor: "var(--accent-pink)", color: "var(--accent-pink)"}}>
+                                    <Eye size={18}></Eye> {t.module3.btnObserve}
+                                </button>
+                            ) : (
+                                <button className='action-btn' onClick={handleReset}>
+                                    <EyeOff size={18}></EyeOff> {t.module3.btnReset}
+                                </button>
+                            )}
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>

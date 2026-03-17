@@ -52,65 +52,73 @@ const Module1 = () => {
             <div className='interaction-grid'>
                 <div className='card'>
                     <span className='badge'>{t.module1.bitLabel}</span>
-                    <div className={`bit-visual ${bitStatus === 1 ? 'on' : 'off'}`}>
-                        {bitStatus}
+                    <div className='interactive-zone'>
+                        <div className={`bit-visual ${bitStatus === 1 ? 'on' : 'off'}`}>
+                            {bitStatus}
+                        </div>
                     </div>
-                    <button className='action-btn' onClick={() => setBitStatus(bitStatus === 0 ? 1 : 0)}>
-                        <Power size={18}/> Switch Bit
-                    </button>
+                    <div className="controls-zone">
+                        <button className='action-btn' onClick={() => setBitStatus(bitStatus === 0 ? 1 : 0)}>
+                            <Power size={18}/> Switch Bit
+                        </button>
+                    </div>
                 </div>
 
                 <div className='card'>
                     <span className='badge quantum'>{t.module1.qubitLabel}</span>
-                    <motion.div
-                        className='qubit-visual'
-                        animate={{
-                            borderRadius: [ 
-                                "60% 40% 30% 70% / 60% 30% 70% 40%",
-                                "30% 60% 70% 40% / 50% 60% 30% 60%",
-                                "60% 40% 30% 70% / 60% 30% 70% 40%",
-                            ]
-                        }}
-                        transition={{
-                            duration: 5, 
-                            repeat: Infinity, 
-                            ease: "easeInOut"
-                        }}
-                    >
+                    <div className='interactive-zone'>
                         <motion.div
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}
+                            className='qubit-visual'
                             animate={{
-                                rotate: 360
+                                borderRadius: [ 
+                                    "60% 40% 30% 70% / 60% 30% 70% 40%",
+                                    "30% 60% 70% 40% / 50% 60% 30% 60%",
+                                    "60% 40% 30% 70% / 60% 30% 70% 40%",
+                                ]
                             }}
                             transition={{
-                                duration: 8,
-                                repeat: Infinity,
-                                ease: "linear"
+                                duration: 5, 
+                                repeat: Infinity, 
+                                ease: "easeInOut"
                             }}
                         >
-                            <motion.span
-                                className='qubit-text'
-                                animate={{ 
-                                    opacity: [0.5, 1, 0.5], 
-                                    rotate: -360
+                            <motion.div
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
                                 }}
-                                transition={{ 
-                                    opacity: 0.12 , 
-                                    repeat: Infinity, 
-                                    rotate: {duration: 8, repeat: Infinity, ease: "linear"}
+                                animate={{
+                                    rotate: 360
+                                }}
+                                transition={{
+                                    duration: 8,
+                                    repeat: Infinity,
+                                    ease: "linear"
                                 }}
                             >
-                                {glitchValue}
-                            </motion.span>
+                                <motion.span
+                                    className='qubit-text'
+                                    animate={{ 
+                                        opacity: [0.5, 1, 0.5], 
+                                        rotate: -360
+                                    }}
+                                    transition={{ 
+                                        opacity: 0.12 , 
+                                        repeat: Infinity, 
+                                        rotate: {duration: 8, repeat: Infinity, ease: "linear"}
+                                    }}
+                                >
+                                    {glitchValue}
+                                </motion.span>
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
-                    <p className='status-label'>{t.module1.qubitInfo}</p>
+                    </div>
+                    <div className="controls-zone">
+                        <p className='status-label'>{t.module1.qubitInfo}</p>
+                    </div>
                 </div>
             </div>
         </div>
