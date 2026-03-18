@@ -45,7 +45,7 @@ const Module6 = () => {
       
             <div className="interaction-grid" style={{ gridTemplateColumns: '1fr' }}>
                 <div className="card">
-                    <span className="badge" >PROTOCOLO BB84</span>
+                    <span className="badge" >{t.module6.title2}</span>
 
                     <div className="interactive-zone" style={{ minHeight: '220px', width: '100%' }}>
                         <div className="crypto-channel" style={{ width: '100%', maxWidth: '700px' }}>

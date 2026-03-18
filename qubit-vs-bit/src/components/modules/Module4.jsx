@@ -67,8 +67,8 @@ const Module4 = () => {
                                 className="nav-btn prev" 
                                 onClick={resetAll}
                                 style={{ 
-                                borderColor: "var(--accent-pink)", 
-                                color: "var(--accent-pink)",
+                                borderColor: 'var(--text-muted)', 
+                                color: 'var(--text-muted)',
                                 opacity: 0.5
                                 }}    
                             >

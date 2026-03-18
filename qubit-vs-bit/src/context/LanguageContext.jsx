@@ -2,10 +2,35 @@ import React, {createContext, useState, useContext} from 'react';
 
 const translations = {
     es: {
+        intro: {
+            title: "Explorando la Computación Cuántica",
+            subtitle: "Un viaje interactivo para entender los principios de la computación del futuro. Descubre la superposición, el entrelazamiento y la criptografía a través de simulaciones en el navegador.",
+            techStack: "Tecnologías utilizadas:",
+            startBtn: "Iniciar el Viaje"
+        },
+        outro: {
+            title: "¡Simulación Completada!",
+            subtitle: "Has dominado los principios básicos de la computación cuántica. Si he podido explicar un concepto tan complejo como el entrelazamiento cuántico usando React y animaciones fluidas, imagina lo que puedo construir para tu equipo.",
+            cta: "Hablemos de tu próximo proyecto:",
+            btnGithub: "Ver Código Fuente",
+            btnLinkedin: "Conectar en LinkedIn",
+            btnEmail: "Enviar un Email",
+            btnRestart: "Volver a empezar",
+            moreProjects: "Más simulaciones interactivas",
+            viewPortfolio: "Ver Portfolio Completo",
+            proj1Title: "Simulador Protocolo BB84",
+            proj1Desc: "App interactiva en Streamlit simulando la criptografía cuántica BB84.",
+            proj2Title: "Qonverse",
+            proj2Desc: "Simulador de conversaciones con IA usando Clerk y Firebase.",
+            proj3Title: "Visualizador Cuántico",
+            proj3Desc: "App interactiva de la Esfera de Bloch creada con Qiskit y Streamlit."
+        },
         title: "Quantum Lab",
         subtitle: "Un viaje interactivo desde el Bit hasta la Criptografía",
         next: "Siguiente",
         prev: "Anterior",
+        text1: "Módulo",
+        text2: "de",
         module1: {
             title: "1. El Bit vs El Qubit",
             theory: {
@@ -57,7 +82,7 @@ const translations = {
                 text2: "En cuántica, esto es imposible. Para copiar algo, primero tienes que 'leerlo' (medirlo). Pero como vimos antes, medir un qubit en superposición hace que colapse. Al intentar copiarlo, destruyes irremediablemente el estado original y obtienes basura."
             },
             interaction: "La Máquina Clonadora",
-            classicalLabel: "DSATOS CLÁSICOS (BIT)",
+            classicalLabel: "DATOS CLÁSICOS (BIT)",
             quantumLabel: "DATOS CUÁNTICOS (QUBIT)",
             btnClone: "Intentar Clonar",
             btnReset: "Limpiar Máquina",
@@ -91,6 +116,7 @@ const translations = {
                 text2: "Si un Hacker intenta interceptar la llave en el camino, las reglas cuánticas dictan que al medir los qubits, los destruirá o alterará. Bob recibirá datos corruptos, sabrá que hay un espía, y descartará la llave. ¡La física te protege!"
             },
             interaction: "Atrapa al Hacker",
+            title2: "PROTOCOLO BB84",
             sender: "Alice (Emisor)",
             receiver: "Bob (Receptor)",
             hacker: "Eve (Espía)",
@@ -102,11 +128,36 @@ const translations = {
             statusHacked: "¡ALARMA! Interferencia cuántica detectada. Llave descartada."
         },
     },
-    en: { 
+    en: {
+        intro: {
+            title: "Exploring Quantum Computing",
+            subtitle: "An interactive journey to understand the principles of the computing of the future. Discover superposition, entanglement, and cryptography through in-browser simulations.",
+            techStack: "Tech Stack:",
+            startBtn: "Start the Journey"
+        }, 
+        outro: {
+            title: "Simulation Complete!",
+            subtitle: "You've mastered the basics of quantum computing. If I can explain a concept as complex as quantum entanglement using React and fluid animations, imagine what I can build for your team.",
+            cta: "Let's talk about your next project:",
+            btnGithub: "View Source Code",
+            btnLinkedin: "Connect on LinkedIn",
+            btnEmail: "Send an Email",
+            btnRestart: "Start Over",
+            moreProjects: "More interactive projects",
+            viewPortfolio: "View Full Portfolio",
+            proj1Title: "BB84 Protocol Simulator",
+            proj1Desc: "Interactive Streamlit app simulating the BB84 quantum cryptography protocol.",
+            proj2Title: "Qonverse",
+            proj2Desc: "AI-powered conversation simulator using Clerk + Firebase.",
+            proj3Title: "Quantum Visualizer",
+            proj3Desc: "Bloch sphere interactive app built with Qiskit + Streamlit."
+        },
         title: "Quantum Lab",
         subtitle: "An interactive journey from Bit to Cryptography",
         next: "Next",
         prev: "Previous",
+        text1: "Module",
+        text2: "of",
         module1: {
             title: "1. Bit vs Qubit",
             theory: {
@@ -183,26 +234,27 @@ const translations = {
             btnReset: "Create new entangled pair",
             statusLinked: "Status: Entangled in Superposition",
             statusCollapsed: "Status: Link broken. Both collapsed."
+        },
+        module6: {
+            title: "6. Quantum Cryptography",
+            theory: {
+                title: "Unhackable Communication (BB84)",
+                text1: "Combining everything we've learned, we can send totally secure messages. Alice sends a 'key' made of qubits in superposition to Bob.",
+                text2: "If a Hacker tries to intercept the key in transit, quantum rules dictate that measuring the qubits will destroy or alter them. Bob will receive corrupted data, know there's a spy, and discard the key. Physics protects you!"
+            },
+            interaction: "Catch the Hacker",
+            title2: "BB84 PROTOCOL",
+            sender: "Alice (Sender)",
+            receiver: "Bob (Receiver)",
+            hacker: "Eve (Spy)",
+            btnSendSafe: "Send Secure Key",
+            btnSendHack: "Activate Spy and Send",
+            btnReset: "Reset Channel",
+            statusIdle: "Communication channel open...",
+            statusSafe: "Success! Key received unaltered. Secure connection.",
+            statusHacked: "ALARM! Quantum interference detected. Key discarded."
         }
     },
-    module6: {
-        title: "6. Quantum Cryptography",
-        theory: {
-            title: "Unhackable Communication (BB84)",
-            text1: "Combining everything we've learned, we can send totally secure messages. Alice sends a 'key' made of qubits in superposition to Bob.",
-            text2: "If a Hacker tries to intercept the key in transit, quantum rules dictate that measuring the qubits will destroy or alter them. Bob will receive corrupted data, know there's a spy, and discard the key. Physics protects you!"
-        },
-        interaction: "Catch the Hacker",
-        sender: "Alice (Sender)",
-        receiver: "Bob (Receiver)",
-        hacker: "Eve (Spy)",
-        btnSendSafe: "Send Secure Key",
-        btnSendHack: "Activate Spy and Send",
-        btnReset: "Reset Channel",
-        statusIdle: "Communication channel open...",
-        statusSafe: "Success! Key received unaltered. Secure connection.",
-        statusHacked: "ALARM! Quantum interference detected. Key discarded."
-    }
 };
 
 const LanguageContext = createContext();
