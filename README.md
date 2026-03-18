@@ -7,7 +7,7 @@
 
 > An interactive and visual journey to understand the fundamental principles of quantum computing, from superposition to unhackable cryptography.
 
-🌍 **[Live Demo Here](YOUR_WEB_LINK_HERE)**
+🌍 **[Live Demo Here](https://bit-vs-qubit.vercel.app/)**
 
 ---
 
@@ -60,6 +60,8 @@ If you want to clone this repository and run it locally, follow these steps:
 4. Start the development server:
     ```bash
     npm run dev
+
+---
 
 ## 👨‍💻 Author
 Nazar Blanco Kataran
