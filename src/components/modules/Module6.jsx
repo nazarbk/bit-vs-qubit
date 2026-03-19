@@ -36,7 +36,7 @@ const Module6 = () => {
                     <br/>
                     <p>{t.module6.theory.text2}</p>
                     <div className="formula-box">
-                        <BlockMath math="K = \{ |\uparrow\rangle, |\rightarrow\rangle, |\nearrow\rangle, |\searrow\rangle ... \}" />
+                        <BlockMath math="K = \\{ |\\uparrow\\rangle, |\\rightarrow\\rangle, |\\nearrow\\rangle, |\\searrow\\rangle ... \\}" />
                     </div>
                 </div>
             </div>

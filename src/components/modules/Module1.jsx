@@ -41,7 +41,7 @@ const Module1 = () => {
                         {t.module1.theory.qubitText}
                     </p>
                     <div className='formula-box'>
-                        <BlockMath math='\psi = \alpha|0\rangle + \beta|1\rangle'></BlockMath>
+                        <BlockMath math='\\psi = \\alpha|0\\rangle + \\beta|1\\rangle'></BlockMath>
                     </div>
                 </div>
             </div>
