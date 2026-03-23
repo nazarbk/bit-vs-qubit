@@ -1,11 +1,9 @@
 import { useMemo } from 'react';
 import katex from 'katex';
-import 'katex/dist/katex.min.css'; // ¡IMPORTACIÓN LOCAL! Ningún navegador la bloqueará.
-
+import 'katex/dist/katex.min.css'; 
 const QuantumMath = ({ formula }) => {
   const htmlString = useMemo(() => {
     try {
-      // Le pasamos la fórmula exacta y le decimos que no lance errores destructivos
       return katex.renderToString(formula, {
         displayMode: true,
         throwOnError: false, 

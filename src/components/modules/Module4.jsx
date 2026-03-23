@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { FileText, Copy, AlertOctagon, RotateCcw } from 'lucide-react';
 import { BlockMath } from 'react-katex';
+import QuantumMath from '../QuantumMath';
 
 const Module4 = () => {
     const { t } = useLanguage();
@@ -27,9 +28,7 @@ const Module4 = () => {
                     <p>{t.module4.theory.text1}</p>
                     <br/>
                     <p>{t.module4.theory.text2}</p>
-                    <div className="formula-box">
-                        <BlockMath math="U(|ψ⟩ ⊗ |0⟩) ≠ |ψ⟩ ⊗ |ψ⟩" />
-                    </div>
+                    <QuantumMath formula={String.raw`U(|\psi\rangle \otimes |0\rangle) \neq |\psi\rangle \otimes |\psi\rangle`} />
                 </div>
             </div>
 

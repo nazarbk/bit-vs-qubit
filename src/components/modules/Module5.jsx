@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { Eye, RotateCcw, Globe, Rocket } from 'lucide-react';
 import { BlockMath } from 'react-katex';
+import QuantumMath from '../QuantumMath';
 
 const Module5 = () => {
   const { t } = useLanguage();
@@ -36,9 +37,7 @@ const Module5 = () => {
           <p>{t.module5.theory.text1}</p>
           <br/>
           <p>{t.module5.theory.text2}</p>
-          <div className="formula-box">
-              <BlockMath math="|Φ^+⟩ = \frac{1}{\sqrt{2}}(|00⟩ + |11⟩)" />
-          </div>
+          <QuantumMath formula={String.raw`|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)`} />
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { Send, Bug, Lock, ShieldAlert, RotateCcw } from 'lucide-react';
 import { BlockMath } from 'react-katex';
+import QuantumMath from '../QuantumMath';
 
 const Module6 = () => {
     const { t } = useLanguage();
@@ -35,9 +36,7 @@ const Module6 = () => {
                     <p>{t.module6.theory.text1}</p>
                     <br/>
                     <p>{t.module6.theory.text2}</p>
-                    <div className="formula-box">
-                        <BlockMath math="K = \{ |↑⟩, |→⟩, |↗⟩, |↘⟩ ... \}" />
-                    </div>
+                    <QuantumMath formula={String.raw`K = \{ |\uparrow\rangle, |\rightarrow\rangle, |\nearrow\rangle, |\searrow\rangle ... \}`} />
                 </div>
             </div>
 
