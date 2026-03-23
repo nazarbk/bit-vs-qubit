@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import {Power, Zap} from 'lucide-react';
 import { BlockMath } from 'react-katex';
+import QuantumMath from '../components/QuantumMath';
 
 const Module1 = () => {
     const {t} = useLanguage();
@@ -41,7 +42,7 @@ const Module1 = () => {
                         {t.module1.theory.qubitText}
                     </p>
                     <div className='formula-box'>
-                       <BlockMath math="|ψ⟩ = α|0⟩ + β|1⟩" />
+                       <QuantumMath formula={String.raw`|\psi\rangle = \alpha|0\rangle + \beta|1\rangle`} />
                     </div>
                 </div>
             </div>
