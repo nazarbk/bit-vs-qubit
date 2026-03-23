@@ -24,6 +24,12 @@ const Module5 = () => {
     setMeasuredBy(null);
   };
 
+  console.log(
+    String.raw`|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)`
+  );
+
+  console.log(t.module5.theory.text1);
+
   return (
     <div className="module-content">
       <header className="module-header">
