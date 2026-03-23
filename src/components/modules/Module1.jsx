@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import {Power, Zap} from 'lucide-react';
 import { BlockMath } from 'react-katex';
-import QuantumMath from '../components/QuantumMath';
+import QuantumMath from '../QuantumMath';
 
 const Module1 = () => {
     const {t} = useLanguage();
