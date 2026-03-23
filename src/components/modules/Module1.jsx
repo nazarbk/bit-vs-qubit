@@ -18,11 +18,6 @@ const Module1 = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    const formula = String.raw`|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)`;
-
-    console.log(formula);
-    console.log([...formula]);
-
     return (
         <div className='module-content'>
             <header className='module-header'>
