@@ -38,7 +38,7 @@ const Module2 = () => {
                         {t.module2.theory.text2}
                     </p>
                     <div className='formula-box'>
-                        <BlockMath math='|\\psi\\rangle = \\frac{1}{\\sqrt{2}}|0\\rangle + \\frac{1}{\\sqrt{2}}|1\\rangle'></BlockMath>
+                        <BlockMath math={"\\left| \\psi \\right> = \\frac{1}{\\sqrt{2}}\\left| 0 \\right> + \\frac{1}{\\sqrt{2}}\\left| 1 \\right>"} />
                     </div>
                 </div>
             </div>
