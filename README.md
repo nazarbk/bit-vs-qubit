@@ -47,11 +47,11 @@ If you want to clone this repository and run it locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/nazarbk/bit-vs-qubit](https://github.com/nazarbk/bit-vs-qubit)
+   git clone https://github.com/nazarbk/bit-vs-qubit
 
 2. Navigate to the project directory:
     ```bash
-    cd YOUR_REPOSITORY
+    cd bit-vs-qubit
 
 3. Install the dependencies:
     ```bash
