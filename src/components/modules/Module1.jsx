@@ -46,7 +46,7 @@ const Module1 = () => {
                         {t.module1.theory.qubitText}
                     </p>
                     <div className='formula-box'>
-                        <BlockMath math="|\\Phi^+\\rangle = \\frac{1}{\\sqrt{2}} (|00\\rangle + |11\\rangle)" />    
+                        <BlockMath math={String.raw`|\psi\rangle = \alpha|0\rangle + \beta|1\rangle`} />    
                     </div>
                 </div>
             </div>
