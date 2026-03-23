@@ -37,7 +37,7 @@ const Module5 = () => {
           <br/>
           <p>{t.module5.theory.text2}</p>
           <div className="formula-box">
-              <BlockMath math={"\\left| \\Phi^+ \\right> = \\frac{1}{\\sqrt{2}}(\\left| 00 \\right> + \\left| 11 \\right>)"} />
+              <BlockMath math="|Φ^+⟩ = \frac{1}{\sqrt{2}}(|00⟩ + |11⟩)" />
           </div>
         </div>
       </div>

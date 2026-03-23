@@ -28,7 +28,7 @@ const Module4 = () => {
                     <br/>
                     <p>{t.module4.theory.text2}</p>
                     <div className="formula-box">
-                        <BlockMath math={"U(\\left| \\psi \\right> \\otimes \\left| 0 \\right>) \\neq \\left| \\psi \\right> \\otimes \\left| \\psi \\right>"} />
+                        <BlockMath math="U(|ψ⟩ ⊗ |0⟩) ≠ |ψ⟩ ⊗ |ψ⟩" />
                     </div>
                 </div>
             </div>
