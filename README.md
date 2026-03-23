@@ -47,7 +47,7 @@ If you want to clone this repository and run it locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
+   git clone [https://github.com/nazarbk/bit-vs-qubit](https://github.com/nazarbk/bit-vs-qubit)
 
 2. Navigate to the project directory:
     ```bash
